@@ -3,7 +3,7 @@
     {
       "name": "backend",
       "root": "backend",
-      "startCommand": "python app.py",
+      "startCommand": "python -m flask run --host=0.0.0.0 --port=5000 &",
       "buildCommand": "pip install -r requirements.txt",
       "env": {
         "PORT": "5000"
@@ -12,7 +12,7 @@
     {
       "name": "frontend",
       "root": "frontend",
-      "startCommand": "npm run dev",
+      "startCommand": "serve -s dist -l 3000",
       "buildCommand": "npm install && npm run build",
       "env": {
         "REACT_APP_API_BASE_URL": "https://webscrape-production-e599.up.railway.app"
