@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FileUpload.css"; // Import custom CSS for styling
-
+import API_BASE_URL from "../App";
 function FileUpload() {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
@@ -8,7 +8,8 @@ function FileUpload() {
   const [loading, setLoading] = useState(false);
   const [scraping, setScraping] = useState(false);
   // const API_BASE_URL = "http://127.0.0.1:5000";
-  const API_BASE_URL = "http://192.168.0.28:5000";
+  // const API_BASE_URL = "http://192.168.0.28:5000";
+  // const API_BASE_URL = "https://127.0.0.1:5000.railway.app";
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];

@@ -1,0 +1,23 @@
+{
+  "services": [
+    {
+      "name": "backend",
+      "root": "backend",
+      "startCommand": "python app.py",
+      "buildCommand": "pip install -r requirements.txt",
+      "env": {
+        "PORT": "5000",
+        "FLASK_ENV": "production"
+      }
+    },
+    {
+      "name": "frontend",
+      "root": "frontend",
+      "startCommand": "npm run dev",
+      "buildCommand": "npm install && npm run build",
+      "env": {
+        "REACT_APP_API_BASE_URL": "https://127.0.0.1:5000.railway.app"
+      }
+    }
+  ]
+}
