@@ -1,0 +1,22 @@
+{
+  "services": [
+    {
+      "name": "backend",
+      "root": "backend",
+      "startCommand": "python app.py",
+      "buildCommand": "pip install -r requirements.txt",
+      "env": {
+        "PORT": "5000"
+      }
+    },
+    {
+      "name": "frontend",
+      "root": "frontend",
+      "startCommand": "npm run dev",
+      "buildCommand": "npm install && npm run build",
+      "env": {
+        "REACT_APP_API_BASE_URL": "https://webscrape-production-e599.up.railway.app"
+      }
+    }
+  ]
+}
